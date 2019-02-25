@@ -72,8 +72,6 @@ class CreateFile {
    * @param {string} extension file extension value
    */
   createFile(name, extension) {
-    console.log('name', name)
-    console.log('extension', extension)
     const filePath = `${process.cwd()}/${name}.${extension}`;
     shell.touch(filePath);
     
@@ -89,7 +87,6 @@ class CreateFile {
       chalk.white.bgGreen.bold(`path: ${filePath}`)
     )
   }
-
 }
 
 new CreateFile();
